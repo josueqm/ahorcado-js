@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+:root {
+    --primaryFont: 'Poppins';
+    --secondaryFont: 'Hind';
+    --primary-color: #E6EBE0;
+    --secondary-color: #9BC1BC;
+    --third-color: #F4F1BB;
+    --action-color: #ED6A5A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--secondaryFont), sans-serif;
+    height: 100%;
+    background: black;
+}
+
+h1 {
+    font-family: var(--primaryFont), sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
+    
+    /* position: absolute; */
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
+    /*
+    width: 1000px;
+    height: 560px;
+    top: calc(50% - 280px);
+    left: calc(50% - 500px); */
+
+    /* padding: 1rem; */
+}
+
+.container-start {
+    height: 560px;
+    text-align: center;
+}
+
+.startGame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.startGame input {
+    border: none;
+    font-size: 1.5rem;
+    background: none;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.startGame input:focus {
+    outline: none;
+    caret-color: var(--action-color);
+}
+
+.startGame a {
+    text-decoration: none;
+    color: inherit;
+    background: var(--action-color);
+    border-radius: 5px;
+    padding: .8rem 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: .5rem;
+}
+
+.container-ahorcado {
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.container-ahorcado img {
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedorPalabraElegida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#mascaraPalabra {
+    width: 100%;
+    padding: 1.45rem 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background: var(--third-color);
+    border-radius: 10px;
+
+}
+
+.character {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-bottom: 3px solid #36C9C6;
+    margin: 0px .2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Contenedor Letras Disponibles */
+#letrasDisponibles {
+    display: flex;
+    height: 100%;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Boton para cada letra del abecedario */
+.btnLetra {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--action-color);
+    color: var(--third-color);
+    font-size: 1.2rem;
+}
+
+.containerLetrasUtilizadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+
+}
+#letrasUtilizadas {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 3px solid #36C9C6;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100%;
+    padding: 1rem;
+    gap: .5rem;
+    
+}
+
+#letrasUtilizadas .btnLetra {
+    cursor: default;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+    background-color: rgba(230, 235, 224, 0.8);
+    border: 2.5px solid var(--secondary-color);
+}
+
+.modal-header h1 {
+    text-transform: uppercase;
+    font-size: 2.8rem !important;
+    font-weight: bold;
+}
+
+#modalInfoImg {
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+
+.infoContainer {
+    color: #212529;
+    font-size: 1.2rem;
+}
